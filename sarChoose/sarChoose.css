@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 550px;
+    text-transform: capitalize;
+}
+.Box-1 {
+    display: inline-block;
+    position: relative;
+    background-color: #eee;
+    padding: 80px;
+    width: 200px;
+    margin-left: 30px;
+    max-height: 228px;
+}
+.Box-2 {
+    display: inline-block;
+    position: relative;
+    background-color: #eee;
+    padding: 80px;
+    width: 200px;
+    margin-left: 30px;
+    max-height: 228px;  
+}
+.type {
+    font-weight: bold;
+    position: relative;
+    bottom: 80px;
+    right: 55px;
+    line-height: 30px;
+    color: white;
+    background-color: #03a9f4;
+    text-align: center;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.sar {
+    position: relative;
+    bottom: 100px;
+    right: 60px;
+    line-height: 150px;
+    text-align: center;
+    background-color: #dddddd;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    font-size: 30px;
+}
+.Box-1::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -18px;
+    background-color:#03a9f4;
+    width: 1px;
+    height: 228px;
+}
+.Box-2::before {
+    content: "or";
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 20px;
+    position: absolute;
+    top: 90px;
+    left: -27px;
+    color: white;
+    background-color: #03a9f4;
+    text-align: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    text-transform: capitalize;
+}
+:root {
+    --Margin : 10px; 
+    --MainBgColor : #ddd;
+    --MarginZero:  0;
+    --parentWidth : 800px;
+    --MainPadding : 10px;
+    --MainMargin : 10px;
+    --MainHeight : 300px;
+    --main-bottom : 25px;
+}
+.page {
+    display: flex;
+    flex-flow: wrap row;
+    width: 800px;
+    height: 425px;
+    margin: 5px;
+    background-color: #eee;
+}
+header {
+    width: var(--parentWidth);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+.logo {
+    padding: var(--MainPadding) 30px;
+    background-color: var(--MainBgColor);
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: var(--MainBgColor);
+    padding: var(--MainPadding);
+    justify-content: flex-end;
+    width: 670px;
+}
+nav ul li {
+    padding-left: var(--MainPadding);
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    width: var(--parentWidth);
+    padding: var(--MainPadding);
+    margin-top: var(--MainMargin);
+}
+article {
+    position: relative;
+    bottom: var(--main-bottom);
+    display: flex;
+    background-color: var(--MainBgColor);
+    flex-basis: 70%;
+    height: var(--MainHeight);
+    padding: var(--MainPadding);
+}
+aside {
+    position: relative;
+    bottom: var(--main-bottom);
+    display: flex;
+    background-color: var(--MainBgColor);
+    flex-basis: 30%;
+    height: var(--MainHeight);
+    margin-left: var(--MainMargin);
+    padding: var(--MainPadding);
+}
+footer {
+    display: flex;
+    position: relative;
+    bottom: 35px;
+    padding: 15px 10px;
+    margin: var(--MainMargin);
+    margin-bottom: 0 ;
+    background-color: var(--MainBgColor);
+    justify-content: space-between;
+    width: var(--parentWidth);
+}

@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+  margin: 100px auto;
+}
+.Box {
+  position: relative;
+  text-align: center;
+  width: 600px;
+  height: 100px;
+  background-color: #ddd;
+  padding: 35px;
+  font-size: 25px;
+  margin: 1px 100px;
+}
+.Box.top::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: 45%;
+  width: 0px;
+  height: 0px;
+  border-color: transparent transparent #ddd transparent;
+  border-style: solid;
+  border-width: 30px;
+  background-color: transparent;
+}
+.Box.right::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 100%;
+  width: 0px;
+  height: 0px;
+  border-color: transparent transparent transparent #ddd;
+  border-style: solid;
+  border-width: 30px;
+  background-color: transparent;
+}
+.Box.bottom::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  width: 0px;
+  height: 0px;
+  border-color: #ddd transparent transparent transparent;
+  border-style: solid;
+  border-width: 30px;
+  background-color: transparent;
+  animation: no-arrow 1s linear infinite forwards paused;
+}
+.Box.bottom:hover::before {
+  animation-play-state: running;
+}
+.Box.left::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: -60px;
+  width: 0px;
+  height: 0px;
+  border-color: transparent #ddd transparent transparent;
+  border-style: solid;
+  border-width: 30px;
+  background-color: transparent;
+}
+@keyframes no-arrow {
+  33% {
+    transform: translateX(120%);
+  }
+  66% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

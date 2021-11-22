@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.container {
+    display: inline-flex;
+    background-color: transparent;
+}
+div {
+    position: relative;
+    width: 200px;
+    height: 1500px;
+    background-color: #000000c9;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, calc(100% / 3));
+}
+.E .first {
+    position: relative;
+    width: 600px;
+    height: 180px;
+    left: 200px;
+}
+.E .cube {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    right: 0;
+    top: 20%;
+    animation: E-move 6s linear 4s ;
+    z-index: 1;
+}
+@keyframes E-move {
+    0% {
+        transform: translateX(0%);
+    }
+    10%{
+        transform: translateX(-650%) rotate(45deg);
+    }
+    20% {
+        transform: translate(-650%, 660%) rotate(90deg);
+        background-color: coral;
+    }
+    30% {
+        transform: translate(0%, 660%) rotate(135deg);
+        border-radius: 25%;
+    }
+    40% {
+        transform: translate(-650%, 660%) rotate(180deg);
+        border-radius: 50%;
+        background-color: cornflowerblue;
+    }
+    50% {
+        transform: translate(-650%, 1320%) rotate(225deg); 
+        border: 10px solid springgreen;
+    }
+    60% {
+        transform: translate(0%, 1320%) rotate(270deg); 
+    }
+    70% {
+        transform: translate(-650%, 1320%) rotate(315deg); 
+    }
+    80% {
+        transform: translate(-650%, 0%) rotate(360deg); 
+    }
+}
+.second {
+    position: relative;
+    width: 600px;
+    height: 180px;
+    left: 200px;
+    align-self: center;
+}
+.third {
+    position: relative;
+    width: 600px;
+    height: 180px;
+    left: 200px;
+    align-self: flex-end;
+}
+.L {
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: flex-end;
+    position: relative;
+    left: 800px;
+}
+.L .first {
+    position: relative;
+    left: 200px;
+    width: 600px;
+    height: 200px;
+}
+.L .cube {
+    position: absolute;
+    right: 20px;
+    top: 25%;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    animation: L-move 3s linear forwards;
+}
+@keyframes L-move {
+    0% {
+        transform: translateX(0%)
+    }
+    25% {
+        transform: translateX(-630%);
+    }
+    50% {
+        transform: translate(-630%, -1300%);
+        opacity: 1;
+    }
+    75% {
+        transform: translate(-630%, -1300%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-630%, -1300%);
+        opacity: 0;
+    }
+}

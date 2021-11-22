@@ -1,0 +1,43 @@
+:root {
+    --Main-circle-size: 100px
+}
+.circle.sh  {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 100px;
+    display: inline-block;
+    background-color: #eee;
+    width: var(--Main-circle-size);
+    height: var(--Main-circle-size);
+    border: 2px solid black;
+    border-radius: 50%;
+    counter-increment: number;
+    margin: 10px;
+    box-shadow: 
+    5px 5px 0px 1px #2196f3,
+    -5px -5px 0px 1px #e91e63;
+}
+.circle.sh::before {
+    content: counter(number);
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    text-align: center;
+    line-height: 10px;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.circle.sh::after {
+    content: "Element";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
